@@ -4,7 +4,7 @@ namespace Foo;
 class Bar
 {
     /**
-     * @param array $imput
+     * @param array $input
      * @return array
      */
     function increment_all($input) {
