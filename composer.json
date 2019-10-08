@@ -2,9 +2,21 @@
     "require-dev": {
         "symplify/easy-coding-standard": "^6.1",
         "phpstan/phpstan": "^0.11.16",
-        "vimeo/psalm": "^3.5"
+        "vimeo/psalm": "^3.5",
+        "phpunit/phpunit": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests/"
+        }
     },
     "scripts": {
+        "test": "vendor/bin/phpunit tests",
         "cs-check": [
             "@ecs",
             "@phpstan",

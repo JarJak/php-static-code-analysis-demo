@@ -102,21 +102,18 @@ services:
     PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer: ~
     PhpCsFixer\Fixer\Operator\ConcatSpaceFixer:
         spacing: 'one'
+    PhpCsFixer\Fixer\Whitespace\BlankLineBeforeStatementFixer:
+        statements:
+            - 'return'
 
 parameters:
+    cache_directory: var/cache/ecs
     skip:
         PHP_CodeSniffer\Standards\Generic\Sniffs\CodeAnalysis\AssignmentInConditionSniff: ~
-        PhpCsFixer\Fixer\Basic\Psr0Fixer:
-            - 'tests/*Test.php'
         PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer: ~
         PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer: ~
         PhpCsFixer\Fixer\Operator\ConcatSpaceFixer: ~
         PhpCsFixer\Fixer\Operator\IncrementStyleFixer: ~
         PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer: ~
-        PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer: ~
         PhpCsFixer\Fixer\Phpdoc\PhpdocAnnotationWithoutDotFixer: ~
         PhpCsFixer\Fixer\Phpdoc\PhpdocSummaryFixer: ~
-        PhpCsFixer\Fixer\PhpUnit\PhpUnitStrictFixer: ~
-        PhpCsFixer\Fixer\Whitespace\BlankLineBeforeStatementFixer: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff: ~
-        Symplify\CodingStandard\Sniffs\ControlStructure\SprintfOverContactSniff: ~

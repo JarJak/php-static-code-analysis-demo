@@ -1,3 +1,4 @@
 vendor/
 composer.lock
 var/cache/*
+.phpunit.result.cache
