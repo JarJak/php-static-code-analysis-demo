@@ -23,7 +23,7 @@ class BarTest extends TestCase
         $input = [1, 2, 'asd', 5, 3];
         $output = [2, 3, 'asd', 6, 4];
         $obj = new Bar();
-        $this->assertSame($output, $obj->increment_all($input));
+        $this->assertSame($output, $obj->incrementAll($input));
     }
 
     public function slugifyProvider()
