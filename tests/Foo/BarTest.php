@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace tests\Foo;
 
 use Foo\Bar;
@@ -10,24 +12,25 @@ class BarTest extends TestCase
     /**
      * @dataProvider slugifyProvider
      */
-    function testSlugify($input, $separator, $output)
+    public function testSlugify($input, $separator, $output): void
     {
         $obj = new Bar();
-        $this->assertEquals($output, $obj->slugify($input, $separator));
+        $this->assertSame($output, $obj->slugify($input, $separator));
     }
 
-    function test_increment_all()
+    public function testIncrementAll(): void
     {
-        $input = array(1, 2, 'asd', 5, 3);
-        $output = array(2, 3, 'asd', 6, 4);
+        $input = [1, 2, 'asd', 5, 3];
+        $output = [2, 3, 'asd', 6, 4];
         $obj = new Bar();
-        $this->assertEquals($output, $obj->increment_all($input));
+        $this->assertSame($output, $obj->increment_all($input));
     }
 
-    public function slugifyProvider() {
+    public function slugifyProvider()
+    {
         return [
             ['foo bar baz', '-', 'foo-bar-baz'],
-            ['Zażółć gęsią jaźń', '_', 'za_g_si_ja']
+            ['Zażółć gęsią jaźń', '_', 'za_g_si_ja'],
         ];
     }
 }
