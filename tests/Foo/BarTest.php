@@ -12,7 +12,7 @@ class BarTest extends TestCase
     /**
      * @dataProvider slugifyProvider
      */
-    public function testSlugify($input, $separator, $output): void
+    public function testSlugify(string $input, string $separator, string $output): void
     {
         $obj = new Bar();
         $this->assertSame($output, $obj->slugify($input, $separator));
@@ -26,7 +26,7 @@ class BarTest extends TestCase
         $this->assertSame($output, $obj->incrementAll($input));
     }
 
-    public function slugifyProvider()
+    public function slugifyProvider(): array
     {
         return [
             ['foo bar baz', '-', 'foo-bar-baz'],
