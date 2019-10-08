@@ -89,6 +89,9 @@ services:
     PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer: ~
     PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer: ~
 
+    # this one is risky, but if you are sure your phpdoc is right then go on
+    SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff: ~
+
     # cognitive complexity - adjust level to your needs, starting from 100
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         maxCognitiveComplexity: 30
