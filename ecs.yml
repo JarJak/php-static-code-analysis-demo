@@ -120,3 +120,5 @@ parameters:
         PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer: ~
         PhpCsFixer\Fixer\Phpdoc\PhpdocAnnotationWithoutDotFixer: ~
         PhpCsFixer\Fixer\Phpdoc\PhpdocSummaryFixer: ~
+        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification: ~
+        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification: ~
