@@ -1,6 +1,6 @@
 # PHP Static Code Analysis demo
 
-See branch `after-fixes` to look for code after fixes applied.
+See branch `master` to look for code before fixes applied.
 
 ## Installation
 ```
