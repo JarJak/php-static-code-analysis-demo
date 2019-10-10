@@ -16,7 +16,6 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
         "cs-check": [
             "@ecs",
             "@phpstan",
@@ -27,6 +26,7 @@
         ],
         "ecs": "vendor/bin/ecs check src tests --clear-cache --ansi",
         "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon --ansi",
-        "psalm": "vendor/bin/psalm --show-info=false"
+        "psalm": "vendor/bin/psalm --show-info=false",
+        "test": "vendor/bin/phpunit"
     }
 }

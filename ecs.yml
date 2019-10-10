@@ -89,13 +89,6 @@ services:
     PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer: ~
     PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer: ~
 
-    # this one is risky, but if you are sure your phpdoc is right then go on
-    SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff: ~
-
-    # cognitive complexity - adjust level to your needs, starting from 100
-    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
-        maxCognitiveComplexity: 30
-
     # arguable checkers, feel free to remove them
     Symplify\CodingStandard\Sniffs\ControlStructure\SprintfOverContactSniff: ~
     PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer:
@@ -108,6 +101,13 @@ services:
     PhpCsFixer\Fixer\Whitespace\BlankLineBeforeStatementFixer:
         statements:
             - 'return'
+
+    # cognitive complexity - adjust level to your needs, starting from 100
+    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
+        maxCognitiveComplexity: 30
+
+    # this one is RISKY, but if you are sure your phpdoc is right then go on
+    SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff: ~
 
 parameters:
     cache_directory: var/cache/ecs

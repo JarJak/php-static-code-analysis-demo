@@ -1,5 +1,7 @@
 # PHP Static Code Analysis demo
 
+See branch `after-fixes` to look for code after fixes applied.
+
 ## Installation
 ```
 composer install
