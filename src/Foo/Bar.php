@@ -23,7 +23,7 @@ class Bar
      * @param string $input
      * @param string $separator
      * @param array|null $allowedChars
-     * @return string
+     * @return array
      */
     public function slugify($input, $separator = '-') {
         $input = strtolower($input);
