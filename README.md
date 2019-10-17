@@ -23,5 +23,5 @@ composer cs-fix
 ## Testing
 Run tests with:
 ```
-cmposer test
+composer test
 ```
